@@ -23,7 +23,9 @@ jobs:
         aws-region: us-west-1
 
     - name: AWS infrastructure automation
-      run: terraform destroy -auto-approve
+      run: |
+        terraform init
+        terraform destroy -auto-approve
         
         
         
