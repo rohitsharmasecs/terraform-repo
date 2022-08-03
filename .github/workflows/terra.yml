@@ -1,4 +1,4 @@
-name: AWS infrastructure
+name: AWS infrastructure using terraform
 
 on:
   #push:
@@ -23,4 +23,9 @@ jobs:
         aws-region: ap-south-1
 
     - name: AWS infrastructure automation
-      run: 
+      run: |
+        terraform init
+        terraform apply
+        
+        
+        
